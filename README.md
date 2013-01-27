@@ -1,3 +1,5 @@
+CliCrawler
+==========
 Запускать скрипт через bin/crawler [url] [--options]
 
 Возможные опции
