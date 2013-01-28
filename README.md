@@ -4,6 +4,12 @@ CliCrawler
 
 Установка
 ---------
+~~~
+  git clone https://github.com/f1nder/CliCrawler.git
+  cd CliCrawler
+  curl http://getcomposer.org/installer | php
+  php composer.phar install --dev
+~~~
 
 Запуск
 --------
@@ -17,4 +23,12 @@ CliCrawler
 ####Пример запуска
 ~~~
   bin/crawler http://symfony.com --debug --level=3 --reportDir=/var/reports
+~~~
+
+Тесты 
+--------
+Проектировалось и тестировалось с помощью довольно молодой утилиты [PHPSpec2](http://www.phpspec.net/)
+####Выполнение тестов 
+~~~
+  bin/phpspec run
 ~~~
