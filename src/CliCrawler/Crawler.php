@@ -110,10 +110,11 @@ class Crawler
      */
     public function validationInputOptions()
     {
+        //report dir must be writable
         if (!is_writable($this->reportDir)) {
-            throw new \Exception(sprintf('Report dir "%s" isn\'t writable.', $this->reportDir));
+            throw new \Exception(sprintf('Report dir "%s" isn\'t writable.',  $this->reportDir));
         }
-
+        //url must be valid
         if (!parse_url($this->url, PHP_URL_HOST)) {
             $this->console->output(sprintf(" \n"), false, 0);
             throw new \Exception("Url  isn't set or not valid.");
