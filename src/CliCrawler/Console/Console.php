@@ -33,6 +33,9 @@ class Console
         print($message);
     }
 
+    /**
+     * Parse and set input options
+     */
     protected function parseOptions()
     {
         foreach ($this->argv as $a) {

@@ -120,6 +120,4 @@ class ArrayUrlCollector implements UrlCollectorInterface
 
         return array_keys($this->quantity);
     }
-
-
 }

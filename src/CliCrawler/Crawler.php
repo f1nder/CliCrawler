@@ -42,7 +42,6 @@ class Crawler
             : dirname(__FILE__) . '/../../reports/';
     }
 
-
     /**
      * Run parse
      */
@@ -81,7 +80,6 @@ class Crawler
         //generate report
         $this->generateReport();
     }
-
 
     /**
      * Generate report
@@ -122,6 +120,4 @@ class Crawler
 
         return true;
     }
-
-
 }

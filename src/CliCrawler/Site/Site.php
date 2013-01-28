@@ -23,7 +23,6 @@ class Site
         return $this->url;
     }
 
-
     /**
      * Check link is internal or external
      *
@@ -70,7 +69,6 @@ class Site
         return $this->currentUrl;
     }
 
-
     /**
      *  Try to normalize url to absolute
      *
@@ -95,7 +93,6 @@ class Site
         return $this->relativeToAbsolute($this->currentUrl, $url);
     }
 
-
     /**
      * Check link is to html page
      *
@@ -116,7 +113,6 @@ class Site
 
         return true;
     }
-
 
     /**
      * Convert relative to absolute url
