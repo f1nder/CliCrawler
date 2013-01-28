@@ -22,7 +22,7 @@ CliCrawler
 
 ####Пример запуска
 ~~~
-  bin/crawler http://symfony.com --debug --level=3
+  bin/crawler http://symfony.com --level=2 --debug 
 ~~~
 
 Тесты 
