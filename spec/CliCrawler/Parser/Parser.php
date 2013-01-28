@@ -20,7 +20,7 @@ class Parser extends ObjectBehavior
 
     function it_should_be_initializable()
     {
-        # $this->shouldHaveType('CliCrawler\Parser\Parser');
+         $this->shouldHaveType('CliCrawler\Parser\Parser');
     }
 
     /**

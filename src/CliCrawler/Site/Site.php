@@ -106,7 +106,7 @@ class Site
     {
         $patterns = array(
             '#\.(png|jpeg|jpg|css|js|gif|ico|xml)(\?.*)?$#',
-            '#^[a-z]+:[a-z]#',
+            '#^[a-z]+:[a-z0-9]#i',
         );
         foreach ($patterns as $pattern) {
             if (preg_match($pattern, $url)) {
@@ -127,6 +127,7 @@ class Site
      */
     protected function relativeToAbsolute($current, $relative)
     {
+      #  var_dump($current, $relative);
         $parse = parse_url($current);
         $root = $parse['scheme'] . "://" . $parse['host'];
         $p = strrpos(substr($current, 7), '/');
@@ -141,7 +142,7 @@ class Site
             $absolute = $base . $relative;
         }
 
-        $absolute = preg_replace('#/(?!\.\.)[^/]+/\.\./#', '/', $absolute, -1);
+        $absolute = preg_replace("#/(?!\.\.)[^/]+/\.\./#", '/', $absolute);
 
         return $absolute;
     }

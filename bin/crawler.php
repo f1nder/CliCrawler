@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+//autoload
 if (is_dir($vendor = __DIR__ . '/../vendor')) {
     require($vendor . '/autoload.php');
 } elseif (is_dir($vendor = __DIR__ . '/../../../../vendor')) {
@@ -13,6 +14,16 @@ if (is_dir($vendor = __DIR__ . '/../vendor')) {
     );
 }
 
-
+//init main class
 $crawler = new \CliCrawler\Crawler();
+
+//validation input options
+try {
+    $crawler->validationInputOptions();
+}catch (Exception $e){
+    printf($e->getMessage()."\n");
+    exit(1);
+}
+
+//run crawler
 $crawler->run();

@@ -96,6 +96,7 @@ class Site extends ObjectBehavior
             array('/test.js', false),
             array('javascript:void()', false),
             array('mailto:asd@asd.ru', false),
+            array('mailto:Olga_Momot@mail.ru', false),
         );
     }
 }

@@ -26,7 +26,11 @@ class ArrayUrlCollector extends ObjectBehavior
         $this->addUrl('http://dummy2.com');
 
         $this->removeUrl('http://dummy2.com');
+
         $this->getUrls()->shouldReturn(array('http://dummy.com', 'http://dummy1.com'));
+
+        //and it should be remove from unvisited
+        $this->getAllUnvisitedUrls('http://dummy.com', 'http://dummy1.com');
     }
 
     function it_should_be_add_only_unique_url_to_collection(){

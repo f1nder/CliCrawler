@@ -20,6 +20,12 @@ class CurlRequest
         return $this->lastContent;
     }
 
+    /**
+     * Simple curl parser
+     *
+     * @param $url
+     * @return bool|mixed
+     */
     protected function curl($url)
     {
         $ch = curl_init();

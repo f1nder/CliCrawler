@@ -13,6 +13,13 @@ class Template
             : $templateDir;
     }
 
+    /**
+     *  Render template with setting vars
+     *
+     * @param $templateName
+     * @param array $vars
+     * @return string
+     */
     public function render($templateName, $vars = array())
     {
         extract($vars, EXTR_OVERWRITE);
